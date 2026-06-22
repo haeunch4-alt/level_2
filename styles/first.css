@@ -1,0 +1,38 @@
+/* 선택자 {속성:값; 속성:값;} */
+h1 {color:red; background-color: yellow;}
+p {color:blue; background-color: #eee;}
+/* 선택자는 html에 작성된 모든태그를 기준으로 한다. */
+h2 {color:pink; background-color: #000;}
+dl {background-color:lightcoral ; color:mediumslateblue}
+dt {background-color:aqua ; color:rosybrown}
+ul {background-color: skyblue;}
+li {color:hotpink;}
+/* CSS 는 부모한테 특정 속성 적용 시 속성에 따라 자식 또는 자손까지 전달되기도 한다. (상속개념) */
+ol {background-color: lightgreen;}
+/* 태그 순서 생각하며 똑같은 선택자 또 쓰지 않기! */
+header {background-color: purple;}
+h3 {background-color: aquamarine; color:#fff;}
+em {background-color: #000;}
+a {background-color:blanchedalmond ; color:lightslategray}
+/* 상속된 color가 a에 적용되지 않는 이유? */
+/* 실제론 적용됐으나 a태그에 기본적으로 내장된 파랑색이 상속된 값을 덮어서 보이지 않는다. */
+/* 태그의 인라인, 블록 유형에 따라 적용 결과가 다를 수 있다. */
+/* 블록 태그 h3은 배경색이 1행 전체에 적용되고 em은 인라인이라서 em 이 가진 글자만큼만 적용된다. */
+/* a태그는 블록, 안라인 모두 가능하나 css상으론 처음 a 태그가 발표됐을때의 초기 모습 (인라인)을 가자고 있다. (나중에 블록형태로 css도 변경가능) */
+section {background-color: mediumorchid; color:#fff;}
+h4 {background-color: antiquewhite; color:#000}
+span {background-color: #bbb; color:aqua;}
+/* 태그가 2개 이상 반복될때 구분하는 클래스선택자 */
+.blog {background-color: bisque;}
+.study {background-color:#cdcdcd ;}
+.study > .first {background-color: aqua;}
+.study > .second {background-color: deeppink;}
+/* 디자인하는 선택자에 부모가 있으면 선택자에 부모까지 포함해서 작성해야한다. */
+.study > li {background-color: #000;}
+/* li {} 잘못된 경우 (부모가 있는데 안적음) */
+.study > li > del {background-color: #fff ;}
+footer {background-color: black; color:white;}
+address {background-color:aqua ;}
+footer > .copy {background-color: palevioletred;}
+footer > p > span {color:#000;}
+footer > p > em {color:white;}
