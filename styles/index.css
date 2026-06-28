@@ -1,0 +1,75 @@
+#muji {
+    width:402px;
+    height: 874px;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+#muji > .ad {
+    height:500px;
+    background-color: coral;
+}
+#muji > .ad > h2 {
+    font-family: 'pretendard', '맑은 고딕';
+    font-weight: 600;
+    font-size: 1.4em;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    color:#fff;
+    margin-bottom: 25px;
+}
+#muji > .ad > h2+p {
+    font-family: 'pretendard', '맑은 고딕';
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    color:#fff;
+}
+#muji > .ad > .page_number {
+    background-color:rgba(0, 0, 0, 0.5);
+    width:60px;
+    line-height: 25px;
+    border-radius: 25px;
+    text-align: center;
+}
+#muji > .ad > .page_number > .current {
+    font-family: 'pretendard', '맑은 고딕';
+    letter-spacing: -0.02em;
+    font-size:0.9em;
+    color:#fff;
+}
+#muji > .ad > .page_number > .total {
+    font-family: 'pretendard', '맑은 고딕';
+    letter-spacing: -0.02em;
+    font-size:0.9em;
+    color:#fff;
+}
+/* ==================2 */
+#muji > .menu_g {
+    padding:16px;
+    display: flex;
+}
+#muji > .menu_g > .menu{
+    padding: 6px 12px 6px 6px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    /* display: inline-block; */
+    display: flex; align-items: center;
+    width:max-content;
+    border-radius: 20px;
+    margin-right: 12px;
+}
+#muji > .menu_g > .menu > .thum {
+    width:20px;
+    height:20px;
+    background-color: aqua;
+    border-radius: 10PX;
+    /* display: inline-block; */
+    margin-right: 8px;
+}
+#muji > .menu_g > .menu > .thum > img {width:100%;}
+#muji > .menu_g > .menu > .h3 {
+    font-family: 'pretendard', '맑은 고딕';
+    letter-spacing: -0.02em;
+    font-size:0.8em;
+    color:#333;
+    /* display: inline-block; */
+}
