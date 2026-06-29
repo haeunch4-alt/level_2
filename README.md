@@ -27,3 +27,30 @@
 * <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 ## 프리텐다드 pretendard
 * <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+# layout 
+### 수평, 수직
+### flex 레이아웃 속성
+#### 적용방법
+1. 정렬하고자 하는 부모-자식 대상을 확인한다.
+2. 2개 이상의 자식 요소가 수평,수직 어느방향으로 정렬되었는지 확인한다,
+3. 부모요소에세 `display:flex`소성을 먼저 적용한다.
+4. 2번에서 확인한 방향을 메인축으로 지정하고 줄바꿈을 설정한다 `flex-flow`
+5. 메인축 정렬을 교차축 정렬속성을 활용하여 마무리를 진행한다.
+#### 주요 속성과 주의사항, 팁
+* `display:flex` : 정렬 자식등의 부모에게 설정하는 flex 시작 값 (필수)
+* `flex-flow :방향 줄바꿈` : 메인축의 방향과 줄바꿈을 성정하는 묶음값 ( 필수)
+* `justify-content:메인축 정렬값`
+    * flex-flow에서 설정된 메인축 방향에 따라 정렬을 정하는 속성
+    * 메인축 row인 경우 : 왼쪽, 가운데, 오른쪽, 양쪽끝, 균등여백
+    * 메인축 cloumn인 경우 : 위, 가운데, 아래, 양쪽 끝, 균등여백
+    * 양쪽,위 (flex-start), 가운데(center), 오른쪽,아래(flex-end)
+    * 양쪽 끝 (space-between), 균등여백 (space-around)
+* `align-content:교차축 2줄이상 정렬값` , `align-items: 교차축 1줄 정렬값`
+    * flex-flow의 값이 nowrap이면 -> align-items
+    * flex-flow의 값이 `wrap`이고 교차축이 2줄이상이면 -> `align-content`
+    * **align-content만 space-between, space-around 값 사용가능**
+    * `flex-end, flex-start, center`는 **aline-content,item 모두 사용가능**
+    * `flex-flow:row nowrap; align-items:flex-end;`
+        * 해석) 흐름 가로, 줄 바꿈 없음, (1줄 정렬) 교차축(세로) 아래정렬
+    * `flex-flox:column wrap; align-content:center;`
+        * 해석) 흐름 세로, 줄바꿈 있음, 교차축(가로) 가운데 정렬
