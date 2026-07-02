@@ -1,0 +1,155 @@
+/* 26.07.02*/
+/* 공통 */
+h1 {
+    font-size:1.2em;
+    border-bottom: 1px dashed #333;
+    padding-bottom:8px;
+    padding-top:8px;
+}
+/* table { */
+    /* margin: 8px 10px 20px; */
+    /* padding :10px; */
+/* } */
+/* table td {padding:10px;} */
+/* 개별 */
+#t1{
+    border: 1px solid #000;
+}
+#t2 {   
+    border-top: 4px solid #f00;
+}
+#t2 tr td {border:2px solid #00F;}
+/* 아이디 t2 요소 안 tr 요소 안 td를 선택 */
+/*  자식 선택자 (>)는 특정부모 안 자식,자손요소가 2개이상 중복될떄 자식만 선택하기 위해서만 사용한다. */
+#t3  {border-bottom:2px solid #000;}
+#t3 * {border:2px solid #333;}
+#t3 tr:nth-child(1) th {background-color: yellow;}
+#t3 tr:nth-child(1) td:nth-child(2) {background-color: pink;}
+#t3 tr:nth-child(2) td:nth-child(1) {background-color: lime;}
+#t3 tr:nth-child(2) td:nth-child(3) {background-color: aqua;}
+/* td 내용 열== p 내용 단락 */
+
+
+/* 도서재고표 */
+#book_stock {background-color:#f2f2f2; border-radius: 25px; overflow: hidden;}
+#book_stock tr {}
+#book_stock tr:nth-child(1) { background-color: #ED94FF;}
+#book_stock tr:nth-child(3) {border: 3px solid #ED94FF;  }
+#book_stock tr:nth-child(3) td {color:#ED94FF; }
+#book_stock tr th {width:100px; color:#fff;}
+#book_stock tr th:nth-child(1) {width:250px; }
+#book_stock tr td {
+    text-align:center;
+    padding-left:16px;  
+}
+/* 아래 선택자 해석: 각행 (tr)의 첫번째(nth) td 선택 */
+#book_stock tr td:nth-child(1){ text-align:left;}
+/* tr의 자식은 td, th만 올 수 있다. 만약 열 태그에 다른 a등의 태그를 쓸 경우  tr* 라고 쓰면a 태그 까지 잡히므로 tr>* 로 써서 자식인 td. th만 잡는 용도로 사용할 수 있다. */
+#book_stock tr > * {padding:16px 0 16px 0 ;}
+
+/* 매출현황표 */
+.area_wrap {
+    width:750px;
+}
+.sale_title {
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.sale_title h2 {
+    font-family:'Noto Sans KR', '맑은 고딕';
+    font-weight:500;
+    letter-spacing: -0.02em;
+}
+.sale_title p {
+    font-family:'Noto Sans KR', '맑은 고딕';
+    font-weight:400;
+    letter-spacing: -0.02em;
+    font-size:0.875em;
+    line-height:130%;
+}
+ #sale_status {background-color: #F5F5F5;/*  margin-bottom: 20px; */}
+#sale_status tr {}
+#sale_status tr:nth-child(5) {background-color: #A8D18D;}
+#sale_status tr:nth-child(1) {
+    border: 2px solid #000;
+    border-left:0; border-right:0;
+}
+#sale_status tr th {
+    width: 150px; height:32px;
+    font-family:'Noto Sans KR', '맑은 고딕';
+    font-weight:500;
+    letter-spacing: -0.02em;
+}
+#sale_status tr td {
+    text-align:center;
+    padding:16px;
+    font-family:'Noto Sans KR', '맑은 고딕';
+    font-weight:400;
+    letter-spacing: -0.02em;
+    font-size:0.875em;
+    line-height:130%;
+}
+.src {
+    font-family:'Noto Sans KR', '맑은 고딕';
+    font-weight:400;
+    letter-spacing: -0.02em;
+    font-size:0.875em;
+    line-height:130%;
+    text-align:right;
+}
+/* 행&열 합치기 연습용 */
+#t4 * {
+    padding :6px;
+    text-align:center;
+    border:1px solid #000
+
+}
+
+/* 선불요금제 */
+#pay {width:1100px; background-color: #f5f5f5;  }
+#pay tr {}
+#pay tr:nth-child(1){
+    border-top:2px solid #000;
+    border-bottom: 1px dashed #000;
+}
+#pay tr:nth-child(2){
+    border-bottom:2px solid #000;
+}
+#pay tr:nth-child(3){
+    border-bottom:1px solid #e9e9e9;
+}
+#pay tr:nth-child(4){
+    border-bottom:1px solid #e9e9e9;
+}
+#pay tr:nth-child(5){
+    border-bottom:1px solid #e9e9e9;
+}
+#pay tr th {font-weight: 700;}
+#pay tr > * { padding:15px;}
+#pay tr th img {}
+#pay tr th h2 {
+    font-weight: 700;
+}
+#pay tr th p {
+    font-size: 0.75em;
+    font-weight: 300;
+}
+#pay th > span {
+    font-size: 0.75em;
+    font-weight: 300;
+}
+#pay td {
+    text-align: center;
+    font-weight:600;
+    font-size: 0.85em;
+    background-color: #fff;
+
+}
+#pay tr td:nth-child(1) {width:250px; } 
+#pay tr td:nth-child(3) {width:350px; } 
+#pay td > em {
+    color:#F743AD;
+    font-weight:700;
+    font-size: 0.85em;
+}
